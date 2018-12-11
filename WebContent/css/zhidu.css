@@ -1,0 +1,62 @@
+body{
+	overflow-y : hide;
+	overflow-x : hide;
+	margin:0;
+	border:0;
+	background-color: #ebf2f5;
+
+}
+.module_butt{
+	font-family:'black';	
+	font-size: 14px;
+	color: #ffffff;
+	border-radius:7px;
+	height:32px;
+	width: 90px;
+	border:1px solid #979797;
+	margin-right:15px;
+	background-color: #51B1F2;
+	outline: none;
+}
+.document_title{
+	border: 1px solid #cccccc;
+	border-radius: 10px;
+	background-color: #ededf4;
+	font-size: 14px;
+	padding-left: 40px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+	height: 45px;
+	line-height: 45px;
+}
+.tab_doc{
+	font-size: 14px;
+	margin-right: auto;
+	margin-left: auto;
+	display: none;
+}
+.tab_doc tr{
+	height: 45px;
+}
+.tab_doc th{
+	text-align: left;
+}
+.doclist td{
+	border-top: 1px dashed;
+	font-size: 12px;
+	text-align: left;
+}
+#form_doc{
+	top: 25%;
+	left: 30%;
+}
+#picfile_selector{
+	font-family:'black';	
+	font-size: 12px;
+	border-radius:3px;
+	height:26px;
+	width: 70px;
+	border:1px solid #EDEDEd;
+	background-color: #f4f4f4;
+	outline: none;
+}

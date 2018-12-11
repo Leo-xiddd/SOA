@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>会议室预订</title>
+	<link rel="stylesheet" type="text/css" href="css/comm.css">
+	<link rel="stylesheet" type="text/css" href="css/mtr.css">
+</head>
+
+<body style="overflow-y: auto">
+	<div id="container" style="width: 91%;padding: 70px;">
+		<header style="font-size: 12px;margin-bottom: 40px;">
+			<table width="100%" cellspacing="0" cellpadding="0" style="font-size: 12px;font-family: '微软雅黑';"><tbody><tr>
+				<td width=20%>
+					<button class="module_butt" href="javascript:void(0)" onclick="add()" style="margin-left: 40px;margin-right: 20px;">添加预订</button>
+					<button class="module_butt" href="javascript:void(0)" onclick="del()">取消预订</button>				
+				</td>
+				<td>				
+					选择日期：<input id="orderdate" type="date">
+				</td>
+			</tr></tbody></table>	
+		</header>
+	
+		<table width="100%" cellspacing="0" cellpadding="0" style="margin-left: auto;margin-right: auto;font-size: 12px;">
+			<tbody id="tbody_mtr">
+				<tr>
+					<td height="40px" width="6%"></td>				
+					<td width="4%">9:00</td>
+					<td width="4%"></td>
+					<td width="4%">10:00</td>
+					<td width="4%"></td>
+					<td width="4%">11:00</td>
+					<td width="4%"></td>
+					<td width="4%">12:00</td>
+					<td width="4%"></td>
+					<td width="4%">13:00</td>
+					<td width="4%"></td>
+					<td width="4%">14:00</td>
+					<td width="4%"></td>
+					<td width="4%">15:00</td>
+					<td width="4%"></td>
+					<td width="4%">16:00</td>
+					<td width="4%"></td>
+					<td width="4%">17:00</td>
+					<td width="4%"></td>
+					<td width="4%">18:00</td>
+					<td width="4%"></td>
+					<td width="4%">19:00</td>
+					<td width="4%"></td>
+					<td width="4%">20:00</td>
+					<td width="4%"></td>
+					<td width="4%">21:00</td>
+					<td width="4%"></td>
+				</tr>
+				<tr>
+					<td rowspan="3">611会议室</td>
+					<td height="10px"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td height="10px" style="border-left: 1px solid;"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td style="border-right: 1px solid"></td>
+				</tr>
+				<tr id="611">
+					<td height="10px" style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid;border-right: 1px solid"></td>
+				</tr>
+				<tr class="orderlist">
+				</tr>
+				<tr>
+					<td height="50px"></td>
+				</tr>
+				<tr>
+					<td rowspan="3">612会议室</td>
+					<td height="10px"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td height="10px" style="border-left: 1px solid;"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td></td>
+					<td style="border-left: 1px solid"></td>
+					<td style="border-right: 1px solid"></td>
+				</tr>
+				<tr id="612">
+					<td height="10px" style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid"></td>
+					<td style="border-left: 1px solid;border-bottom: 1px solid;border-right: 1px solid"></td>
+				</tr>
+				<tr id="612" class="orderlist">
+				</tr>
+			</tbody>
+		</table>
+		<!--遮罩层：用于显示弹层后遮盖下面的页面元素-->
+		<div id="overlay" class="overlay"></div>	
+		<div id="overlay2" class="overlay2"></div>		
+		<!--弹层：预订会议室-->	
+		<div id="form_order" class="popwindow" style="padding-bottom: 20px;">
+			<div id="title_form_order" class="pop_head">预订会议室</div>
+			<div class="pop_body" style="padding-left: 60px;padding-right: 40px;padding-top: 30px;">
+				<table cellspacing="0" cellpadding="0" style="font-size: 12px;"><tbody>
+					<tr>
+						<td align="right">会议室：</td>
+						<td>
+							<select id="room" style="background-color: transparent;">
+								<option value="611">611会议室</option>
+								<option value="612">612会议室</option>
+							</select>
+						</td>
+						<td align="right">日期：</td>
+						<td><span id="form_date"></span></td>
+					</tr>
+					<tr>
+						<td align="right">会议时段：</td>
+						<td colspan="3"><select id="st_time" class="selector">
+							<option id="1">9:00</option>
+							<option id="2">9:30</option>
+							<option id="3">10:00</option>
+							<option id="4">10:30</option>
+							<option id="5">11:00</option>
+							<option id="6">11:30</option>
+							<option id="7">12:00</option>
+							<option id="8">12:30</option>
+							<option id="9">13:00</option>
+							<option id="10">13:30</option>
+							<option id="11">14:00</option>
+							<option id="12">14:30</option>
+							<option id="13">15:00</option>
+							<option id="14">15:30</option>
+							<option id="15">16:00</option>
+							<option id="16">16:30</option>
+							<option id="17">17:00</option>
+							<option id="18">17:30</option>
+							<option id="19">18:00</option>
+							<option id="20">18:30</option>
+							<option id="21">19:00</option>
+							<option id="22">19:30</option>
+						</select> 
+						-
+						<select id="ed_time" class="selector">						
+							<option id="2">9:30</option>
+							<option id="3">10:00</option>
+							<option id="4">10:30</option>
+							<option id="5">11:00</option>
+							<option id="6">11:30</option>
+							<option id="7">12:00</option>
+							<option id="8">12:30</option>
+							<option id="9">13:00</option>
+							<option id="10">13:30</option>
+							<option id="11">14:00</option>
+							<option id="12">14:30</option>
+							<option id="13">15:00</option>
+							<option id="14">15:30</option>
+							<option id="15">16:00</option>
+							<option id="16">16:30</option>
+							<option id="17">17:00</option>
+							<option id="18">17:30</option>
+							<option id="19">18:00</option>
+							<option id="20">18:30</option>
+							<option id="21">19:00</option>
+							<option id="22">19:30</option>
+							<option id="23">20:00</option>
+						</select> </td>
+					</tr>
+					<tr>
+						<td align="right">会议人数：</td>
+						<td><input id="num" style="width:50px"></td>
+						<td align="right">投影：</td>
+						<td><select id="video">
+							<option>需要</option>
+							<option>不需要</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td align="right">请填写会议事由：</td>
+						<td colspan="3"><input id="note" style="width:300px"></td>
+					</tr>
+
+				</tbody></table>
+			</div>
+			<div class="pop_foot">
+				<table width="100%" cellspacing="0" cellpadding="0"><tbody>
+					<tr><td width="50%" align="center">
+						<button class="module_butt" href="javascript:void(0)" onclick="CloseForm('#form_order','#overlay')">取消</button>
+					</td><td align="center">
+						<button class="module_butt" href="javascript:void(0)" onclick="save()">保存</button>
+					</td></tr>
+				</tbody></table>				
+			</div>
+		</div>
+		<!--弹层：警告-->
+		<div id="form_floatmess" class="popwindow">
+			<div class="pop_body" style="padding:20px 40px 10px 40px;line-height: 24px">
+				<div>预定人：<span id="fm_master_name"></span></div>
+				<div>投影仪：<span id="fm_video"></span></div>
+				<div>会议人数：<span id="fm_p_number"></span></div>
+				<div>会议事由：<span id="fm_note"></span></div>
+			</div>
+		</div>
+		<!--弹层：警告-->
+		<div id="form_alert" class="popwindow">
+			<div id="form_alert_title" class="pop_head">友好提醒</div>
+			<div class="pop_body" style="text-align: center;padding:20px 40px 10px 40px;">
+				<span id="alert_mess"></span>
+			</div>
+			<div id="alertbutt" style="text-align: center;padding-bottom: 20px">
+				<button class="module_butt" href="javascript:void(0)" onclick="CloseForm('#form_alert','#overlay2')">确定</button>		
+			</div>
+		</div>
+	</div><!--用于结束container-->
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/comm.js"></script>
+<script type="text/javascript" src="js/mtr.js"></script>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>规章制度</title>
+	<link rel="stylesheet" type="text/css" href="css/comm.css">
+	<link rel="stylesheet" type="text/css" href="css/zhidu.css">
+</head>
+
+<body>
+	<div id="container" style="width: 91%;padding: 70px;overflow-y: auto;height: 650px">
+		<header style="font-size: 12px;">
+			<button class="module_butt" href="javascript:void(0)" onclick="add()" style="margin-right: 20px;">添加制度</button>
+			<button class="module_butt" href="javascript:void(0)" onclick="del()">删除制度</button>				
+		</header>
+
+		<div class="document_title">人事制度</div>
+		<table width=90% cellspacing="0" cellpadding="0" class="tab_doc">
+			<thead>
+				<th width="40px"></th>
+				<th width="200px">名称</th>
+				<th width="150px">发布人</th>
+				<th width="200px">发布时间</th>
+				<th width="120px">版本</th>		
+			</thead>
+			<tbody id="tbody_hr" class="doclist"></tbody>
+		</table>
+		<div class="document_title">财务制度</div>
+		<table width=90% cellspacing="0" cellpadding="0" class="tab_doc">
+			<thead>
+				<th width="40px"></th>
+				<th width="200px">名称</th>
+				<th width="150px">发布人</th>
+				<th width="200px">发布时间</th>
+				<th width="120px">版本</th>		
+			</thead>
+			<tbody id="tbody_cw" class="doclist"></tbody>
+		</table>
+		<div class="document_title">行政制度</div>
+		<table width=90% cellspacing="0" cellpadding="0" class="tab_doc">
+			<thead>
+				<th width="40px"></th>
+				<th width="200px">名称</th>
+				<th width="150px">发布人</th>
+				<th width="200px">发布时间</th>
+				<th width="120px">版本</th>		
+			</thead>
+			<tbody id="tbody_xz" class="doclist"></tbody>
+		</table>
+		<div class="document_title">商务制度</div>
+		<table width=90% cellspacing="0" cellpadding="0" class="tab_doc">
+			<thead>
+				<th width="40px"></th>
+				<th width="200px">名称</th>
+				<th width="150px">发布人</th>
+				<th width="200px">发布时间</th>
+				<th width="120px">版本</th>		
+			</thead>
+			<tbody id="tbody_bus" class="doclist"></tbody>
+		</table>
+		<div class="document_title">市场制度</div>
+		<table width=90% cellspacing="0" cellpadding="0" class="tab_doc">
+			<thead>
+				<th width="40px"></th>
+				<th width="200px">名称</th>
+				<th width="150px">发布人</th>
+				<th width="200px">发布时间</th>
+				<th width="120px">版本</th>		
+			</thead>
+			<tbody id="tbody_mkt" class="doclist"></tbody>
+		</table>
+		<div class="document_title">研发制度</div>
+		<table width=90% cellspacing="0" cellpadding="0" class="tab_doc">
+			<thead>
+				<th width="40px"></th>
+				<th width="200px">名称</th>
+				<th width="150px">发布人</th>
+				<th width="200px">发布时间</th>
+				<th width="120px">版本</th>		
+			</thead>
+			<tbody id="tbody_rd" class="doclist"></tbody>
+		</table>
+		<div class="document_title">保密制度</div>
+		<table width=90% cellspacing="0" cellpadding="0" class="tab_doc">
+			<thead>
+				<th width="40px"></th>
+				<th width="200px">名称</th>
+				<th width="150px">发布人</th>
+				<th width="200px">发布时间</th>
+				<th width="120px">版本</th>		
+			</thead>
+			<tbody id="tbody_bm" class="doclist"></tbody>
+		</table>
+	<!--遮罩层：用于显示弹层后遮盖下面的页面元素-->
+	<div id="overlay" class="overlay"></div>	
+	<div id="overlay2" class="overlay2"></div>	
+	<!--弹层：用户信息，用于添加本地用户或者修改用户信息-->	
+	<div id="form_doc" class="popwindow">
+		<div id="title_form_doc" class="pop_head">上传文档</div>
+		<div class="pop_body" style="line-height: 45px;padding: 25px">
+			<div>
+				文档：<input id="name" style="width: 360px">
+				<button id="picfile_selector">选择文档</button><input type="file" onchange="addFile()" id="picfile_select" multiple="single" style="display: none">				
+			</div>
+			<div>类型：<select id="type" style="margin-right: 40px">
+				<option>人事制度</option>
+				<option>财务制度</option>
+				<option>行政制度</option>
+				<option>研发制度</option>
+				<option>市场制度</option>
+				<option>商务制度</option>
+				<option>保密制度</option>
+			</select>
+				<span>版本：</span><input id="ver" style="width: 60px">
+			</div>
+		</div>
+		<div class="pop_foot" style="padding-bottom: 25px">
+			<table width="100%" cellspacing="0" cellpadding="0"><tbody>
+				<tr><td width="50%" align="center" valign="middle">
+					<button class="module_butt" href="javascript:void(0)" onclick="CloseForm('#form_doc','#overlay')">取消</button>
+				</td><td align="center" valign="middle">
+					<button class="module_butt" href="javascript:void(0)" onclick="save()">保存</button>
+				</td></tr>
+			</tbody></table>				
+		</div>
+	</div>	
+	<!--弹层：警告-->
+	<div id="form_alert" class="popwindow">
+		<div id="form_alert_title" class="pop_head">友好提醒</div>
+		<div class="pop_body" style="text-align: center;padding:20px 40px 10px 40px;">
+			<span id="alert_mess"></span>
+		</div>
+		<div id="alertbutt" style="text-align: center;padding-bottom: 20px">
+			<button class="module_butt" href="javascript:void(0)" onclick="CloseForm('#form_alert','#overlay2')">确定</button>		
+		</div>
+	</div>
+	</div><!--用于结束container-->
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/comm.js"></script>
+<script type="text/javascript" src="js/zhidu.js"></script>
+</html>

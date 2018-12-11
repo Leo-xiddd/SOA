@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>安码科技办公系统</title>
+	<link rel="stylesheet" type="text/css" href="css/comm.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+</head>
+
+<body>
+	<div style="width: 91%;padding: 70px;">
+		<div style="width: 100%;margin-bottom: 40px;">
+			<table width="100%" cellspacing="0" cellpadding="0">
+				<tbody><tr>
+					<td width="260px"><div id="hrm" class="model">
+						<div class="img_block"><img src="img/hrm.ico" width="40px"></div>
+						<div class="model_title">人力资源管理系统</div>
+						<div class="content">快速入口</div>
+					</div></td>
+					<td></td>
+					<td width="260px"><div id="" class="model">
+						<div class="img_block"><img src="img/kaoqin.ico" width="40px"></div>
+						<div class="model_title">考勤管理系统</div>
+						<div class="content">快速入口</div>
+					</div></td>
+					<td></td>
+					<td width="260px"><div id="" class="model">
+						<div class="img_block"><img src="img/jixiao.ico" width="40px"></div>
+						<div class="model_title">绩效管理系统</div>
+						<div class="content">快速入口</div>
+					</div></td>
+					<td></td>
+					<td width="260px"><div id="eas" class="model">
+						<div class="img_block"><img src="img/eas.ico" width="40px"></div>
+						<div class="model_title">固定资产管理系统</div>
+						<div class="content">快速入口</div>
+					</div></td>
+					<td></td>
+					<td width="260px"><div id="ips" class="model">
+						<div class="img_block"><img src="img/ips.ico" width="40px"></div>
+						<div class="model_title">知识产权管理系统</div>
+						<div class="content">快速入口</div>
+					</div></td>
+				</tr></tbody>
+			</table>
+		</div>
+
+		<div style="width: 100%">
+			<table width="100%" cellspacing="0" cellpadding="0">
+				<tbody><tr>
+					<td width="436px"><div class="model_1">
+						<div style="padding-left:40px;height: 80px;line-height: 80px;font-size: 28px;font-family: 'black';">公告</div>
+						<hr style="background-color: #e0e0e0;height:1px;border:none;">
+						<div style="height: 286px;"> 
+							<div style="margin-top: 20px;margin-bottom: 15px;font-size: 12px;color: #abc7db;font-family: '微软雅黑';padding-left: 40px">
+								<div id="gg_dtime" style="display: inline-block;width: 40%">2018.8.21</div>
+								<div id="gg_author" style="display: inline-block;width: 40%;text-align: right">xxx</div>
+							</div>
+							<div id="gg_title" style="margin-bottom: 25px;font-size: 20px;color: #5c6273;font-family: 'black';padding-left: 40px">sdwewwfdsfsdfdsfdsfsdf</div>
+							<div id="gg_content" class="content1">哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈啊哈</div>
+						</div>
+						<hr style="background-color: #e0e0e0;height:1px;border:none;">
+						<div>
+							<button id="butt_moredetails">查看详情</button>
+						</div>
+					</div></td>
+					<td></td>
+					<td width="436px"><div class="model_1" id="">
+						<img src="img/pic11.png" width="436px" height="486px">
+					</div></td>
+					<td></td>
+					<td width="436px"><div class="model_1" id="neikan">
+						<img src="img/anmawenhua.png" width="436px" height="486px">
+					</div></td>
+				</tr></tbody>
+			</table>
+		</div>
+	</div>
+	<!--遮罩层：用于显示弹层后遮盖下面的页面元素-->
+	<div id="overlay" class="overlay"></div>	
+	<div id="overlay2" class="overlay2"></div>	
+	<!--弹层：公告正文-->	
+	<div id="form_board_gg" class="popwindow" style="">
+		<div id="title_form_board_gg" class="pop_head" style="font-size: 18px;padding-left: 20px;padding-top: 15px;">公告</div>
+		<div class="pop_body" style="width: 600px;padding: 35px;">
+			<div id="board_title"></div>
+			<div>
+				<table width="100%" cellspacing="0" cellpadding="0"><tbody>
+					<tr>
+						<td id="board_dtime" align="left"></td>
+						<td id="board_author" align="right"></td>
+					</tr>
+				</tbody></table>
+			</div>
+			<div id="content" style="margin-top: 20px"></div>
+		</div>
+		<div class="pop_foot" style="padding-bottom: 30px;text-align: center">
+			<button class="module_butt" href="javascript:void(0)" onclick="CloseForm('#form_board_gg','#overlay')">关闭</button>				
+		</div>
+	</div>	
+	<!--弹层：警告-->
+	<div id="form_alert" class="popwindow">
+		<div id="form_alert_title" class="pop_head">友好提醒</div>
+		<div class="pop_body" style="text-align: center;padding:20px 40px 10px 40px;">
+			<span id="alert_mess"></span>
+		</div>
+		<div id="alertbutt" style="text-align: center;padding-bottom: 20px">
+			<button  class="module_butt" href="javascript:void(0)" onclick="CloseForm('#form_alert','#overlay2')">确定</button>		
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/comm.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
+</html>

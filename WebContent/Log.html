@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>操作日志</title>
+	<link rel="stylesheet" type="text/css" href="css/comm.css">
+	<link rel="stylesheet" type="text/css" href="css/log.css">
+</head>
+
+<body>
+	<div id="Crumbs">机房管理&nbsp;>&nbsp;&nbsp;操作日志</div>
+	<table id="tab_head" width=100% cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td style="padding-left: 10px">
+					<button class="headbutt" id="serv">物理设备</button><button class="headbutt" id="vm" style="background-color: #37A4A4;">虚拟机</button><button class="headbutt" id="service" style="background-color: #37A4A4;">服务</button><button class="headbutt" id="part" style="background-color: #37A4A4;">零配件</button>
+				</td>
+				<td align="right" valign="top">
+					<select id="filt_key">
+						<option value="logdate">日期</option>
+						<option value="operator">操作人</option>
+						<option value="obj">操作对象</option>
+					</select>
+					<input type="text" id="filt_value">
+					<button class="head_butt" href="javascript:void(0)" onclick="filt()" style="width: 70px;">快速查找</button>
+					</td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="body_frame">
+		<div id="body_log">
+			<table width=100% cellspacing="0" cellpadding="0">
+			<thead>
+				<th width="150px"><button class="logheadbutt">时间</button></th>
+				<th width="60px"><button class="logheadbutt">操作人</button></th>
+				<th width="120px"><button class="logheadbutt">操作对象</button></th>
+				<th width="500px"><button class="logheadbutt">操作记录</button></th>
+			</thead>
+			<tbody id="tbody_log">
+			</tbody>
+			</table>
+		</div>
+		
+	</div>
+	<!--遮罩层：用于显示弹层后遮盖下面的页面元素-->
+	<div id="overlay" class="overlay"></div>	
+	<!--弹层：日志详情-->
+	<div id="form_loginfo" class="popwindow">
+		<div id="form_loginfo_title" class="pop_head">日志详情</div>
+		<div class="pop_body" style="padding: 10px 20px 15px 10px;">
+			<table cellspacing="0" cellpadding="0"><tbody>
+				<tr>
+					<td align="right" width="70px"><b>操作日期：</b></td>
+					<td width="200px" id="logdate"></td>
+				</tr>
+				<tr>
+					<td align="right"><b>操作用户：</b></td>
+					<td><span id="operator"></span></td>
+				</tr>
+				<tr>
+					<td align="right" valign="top"><b>操作内容：</b></td>
+					<td id="log" valign="top"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center" style="padding-top: 5px;">
+						<button class="form_butt" href="javascript:void(0)" onclick="CloseForm('#form_loginfo','#overlay')">确定</button>
+					</td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>
+	<!--弹层：警告-->
+	<div id="form_alert" class="popwindow">
+		<div id="form_alert_title" class="pop_head">友好提醒</div>
+		<div class="pop_body" style="padding:10px 10px 10px 10px;">
+			<table cellspacing="0" cellpadding="0"><tbody>
+				<tr>
+					<td valign="bottom">
+						<img src="img/alert.jpg" style="margin-right: 10px;">
+					</td>
+					<td><span id="alert_mess"></span></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<button class="form_butt" href="javascript:void(0)" onclick="CloseForm('#form_alert','#overlay')">确定</button>
+					</td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>
+	<!--弹层：警告-->
+	<div id="form_confirm" class="popwindow">
+		<div id="form_confirm_title" class="pop_head">友好提醒</div>
+		<div class="pop_body">
+			<table cellspacing="0" cellpadding="0"><tbody>
+				<tr>
+					<td rowspan="2">
+						<img src="img/alarm.jpg" style="margin-right: 10px;">
+					</td>
+					<td id="alertmess"></td>
+				</tr>
+				<tr>
+					<td align="center">
+						<button id="butt_confirm" href="javascript:void(0)" onclick="confirmTo()">确定</button>
+						<button href="javascript:void(0)" onclick="CloseForm('#form_confirm','#overlay')">取消</button>
+					</td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/comm.js"></script>
+<script type="text/javascript" src="js/log.js"></script>
+</html>

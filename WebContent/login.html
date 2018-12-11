@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>登录页</title>
+	<link rel="shortcut icon" type="image/x-icon" href="eas.ico" />
+	<link rel="stylesheet" type="text/css" href="css/comm.css">
+	<link rel="stylesheet" type="text/css" href="css/PGlogin.css">
+</head>
+
+<body>
+	<div id='logbox'>
+		<div style="text-align:right;height: 80px"><img src="img/ewm_over.png" height="80px"></div>
+		<div id="title">登录</div>
+		<div class="inputline">
+			<div style="display: inline-block;"><input id="loginuser" placeholder="请输入您的账号"></div>
+			<div style="display: inline-block;"><img src="img/account.png" height="20px"></div>
+		</div>
+		<div class="inputline" style="margin-top: 20px">
+			<div style="display: inline-block;"><input id="loginpwd" placeholder="请输入您的密码"></div>
+			<div style="display: inline-block;"><img src="img/pwd.png" height="20px"></div>
+		</div>
+		<div style="font-family: '微软雅黑';font-size: 12px;vertical-align:middle;">
+			<div style="display: inline-block;"><input type="checkbox" id="remberpwd"></div>
+			<div style="display: inline-block;height: 40px;line-height: 40px;">记住密码</div>
+		</div>
+		<div style="margin-top: 20px;text-align: center">
+			<button id="butt_login">登录</button>
+		</div>
+	</div>
+	<!--遮罩层：用于显示弹层后遮盖下面的页面元素-->
+	<div id="overlay" class="overlay"></div>
+	<!--弹层：警告-->
+	<div id="form_alert" class="popwindow" style="top:55%;left:70%;">
+		<div id="form_alert_title" class="pop_head" style="height: 10px"></div>
+		<div class="pop_body" style="padding:10px 30px 10px 30px;">
+			<table cellspacing="0" cellpadding="0"><tbody>
+				<tr>
+					<td><span id="alert_mess"></span></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<button href="javascript:void(0)" onclick="CloseForm('#form_alert','#overlay')" style="width: 60px;height: 25px;line-height: 25px;border-radius: 5px;font-size: 12px;">确定</button>
+					</td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/comm.js"></script>
+<script type="text/javascript" src="js/encypt.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+</html>

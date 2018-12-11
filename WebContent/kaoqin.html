@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>考勤查询</title>
+	<link rel="stylesheet" type="text/css" href="css/comm.css">
+	<link rel="stylesheet" type="text/css" href="css/kaoqin.css">
+</head>
+
+<body>
+	<div id="container" style="width: 70%;padding: 70px;">
+		<header style="font-size: 12px;margin-bottom: 10px;">
+			<table width=100% cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr>
+						<td width="60%">下面是您<span id="mon_num">本</span>月度的考勤记录：</td>
+						<td align="right">
+							<button class="module_butt">查看上个月</button>
+							<button class="module_butt">查看下个月</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</header>
+		<table id="tab_MT" width=100% cellspacing="0" cellpadding="0">
+			<thead>
+				<th style="border-left: 0" width="80px">日期</th>
+				<th width="200px">上班打卡</th>
+				<th width="150px">下班打卡</th>
+				<th width="200px">考勤状态</th>
+				<th></th>			
+			</thead>
+			<tbody id="tbody_MT">
+				<tr>
+					<td>2018-12-1</td>
+					<td>8:45</td>
+					<td>18:01</td>
+					<td>正常</td>
+					<td><button>提交考勤申请</button></td>
+				</tr>
+			</tbody>
+		</table>
+		
+	<!--遮罩层：用于显示弹层后遮盖下面的页面元素-->
+	<div id="overlay" class="overlay"></div>	
+	<div id="overlay2" class="overlay2"></div>		
+	<!--弹层：警告-->
+	<div id="form_alert" class="popwindow">
+		<div id="form_alert_title" class="pop_head">友好提醒</div>
+		<div class="pop_body" style="text-align: center;padding:20px 40px 10px 40px;">
+			<span id="alert_mess"></span>
+		</div>
+		<div id="alertbutt" style="text-align: center;padding-bottom: 20px">
+			<button href="javascript:void(0)" onclick="CloseForm('#form_alert','#overlay2')">确定</button>		
+		</div>
+	</div>
+	</div><!--用于结束container-->
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/comm.js"></script>
+<script type="text/javascript" src="js/kaoqin.js"></script>
+</html>

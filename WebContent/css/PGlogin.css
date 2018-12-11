@@ -1,0 +1,88 @@
+body{
+	margin:0px;
+	background-image: url(../img/login_bg.png);	
+	background-repeat:no-repeat;
+	background-size: cover; 
+	background-size: 100%;
+}
+#logbox{
+	width: 540px;
+	height: 622px;
+	position: relative;
+	top:200px;
+	left:920px;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+	padding: 15px;
+}
+#title{
+	margin-top: 30px;
+	margin-bottom: 90px;
+	font-family:'微软雅黑';
+	font-size: 40px;
+	text-align: center;
+	letter-spacing: 2em;
+	text-indent: 2em;
+	/*color:#00305c;*/
+}
+.inputline input{
+	width:350px;
+	height:40px;
+	font-family:'微软雅黑';
+	font-size: 18px;
+	color: #747474;
+	padding-left: 5px;
+	border:0;
+	outline: none;
+}
+.inputline{
+	height: 50px;
+	width: 390px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	border-bottom: 1.5px solid #4c7cff;
+}
+.inputline input::-webkit-input-placeholder {
+ 	color: #d8d8d8;
+ 	font-size: 16px;
+}
+#remberpwd{
+	margin-left: 80px;
+	margin-top: 20px;
+	/*margin-right: 10px;*/
+	padding: 0;
+	width: 15px;
+	height: 15px;
+	border:1px solid  #4c7cff;
+	border-radius: 0px;
+	/*vertical-align:middle;*/
+}
+button{
+	width:384px;
+	height:52px;
+	border:0;
+	margin-top: 15px;
+	font-family:'微软雅黑';
+	font-size: 18px;
+	text-align:center;
+	border-radius: 20px;
+	background-color:#4c7cff;
+	color: #FFFFFF;
+	outline: none;
+	/*background: url(../img/pwd.jpg) no-repeat scroll left center transparent;*/
+}
+span{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#ico_log{
+	position: relative;
+	top:20px;
+	left:20px;
+}
+#copyright{
+	color: #FCEADE;
+	font-family:'微软雅黑';
+	font-size: 16px;
+}

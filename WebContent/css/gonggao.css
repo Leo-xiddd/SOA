@@ -1,0 +1,88 @@
+body{
+	overflow-y : hide;
+	overflow-x : hide;
+	margin:0;
+	border:0;
+	background-color: #ebf2f5;
+
+}
+.module_butt{
+	font-family:'black';	
+	font-size: 14px;
+	color: #ffffff;
+	border-radius:7px;
+	height:32px;
+	width: 90px;
+	border:1px solid #979797;
+	margin-right:15px;
+	background-color: #51B1F2;
+	outline: none;
+}
+.document_title{
+	border: 1px solid #cccccc;
+	border-radius: 10px;
+	background-color: #ededf4;
+	font-size: 16px;
+	padding-left: 60px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+	height: 45px;
+	line-height: 45px;
+}
+#form_GG{
+	top: 10%;
+	left: 33%;
+}
+#form_board_gg{
+	top: 10%;
+	left: 33%;
+}
+.tab_doc{
+	font-size: 14px;
+}
+.tab_doc tr{
+	height: 45px;
+}
+.doclist td{
+	border-top: 1px dashed;
+	font-size: 12px;
+	text-align: center;
+}
+.gg_summary{
+	width: 1000px;
+	margin-left: 20px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: left;
+}
+#board_title{
+	font-family:'black';	
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 45px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+#board_dtime{
+	font-family:'微软雅黑';	
+	font-size: 12px;
+	color: #585858;
+	line-height: 30px;
+}
+#board_author{
+	font-family:'微软雅黑';	
+	font-size: 12px;
+	color: #585858;
+	line-height: 30px;
+}
+#board_content{
+	font-family:'微软雅黑';	
+	font-size: 14px;
+	color: #585858;
+	text-indent: 2em;
+	line-height: 24px;
+	height: 500px;
+	overflow-y: auto;
+	margin-top: 20px;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>规章制度</title>
+	<link rel="stylesheet" type="text/css" href="css/comm.css">
+	<link rel="stylesheet" type="text/css" href="css/gonggao.css">
+</head>
+
+<body>
+	<div id="container" style="width: 91%;padding: 70px;">
+		<header style="font-size: 12px;margin-bottom: 40px;">
+			<table width="100%" cellspacing="0" cellpadding="0" style="font-size: 12px;font-family: '微软雅黑';"><tbody><tr>
+				<td width="20%">
+					请选择公告类型：<select id="type" style="background-color: transparent;">
+						<option>全部</option>
+						<option>放假通知</option>
+						<option>任命文件</option>
+					</select>
+				</td>
+				<td align="right">
+					<button class="module_butt" href="javascript:void(0)" onclick="add()" style="margin-right: 20px;">发布公告</button>
+					<button class="module_butt" href="javascript:void(0)" onclick="del()">删除公告</button>				
+				</td>
+			</tr></tbody></table>			
+		</header>
+
+		<table width=100% cellspacing="0" cellpadding="0" class="tab_doc">
+			<thead>
+				<th width="60px">序号</th>
+				<th width="200px">公告</th>
+				<th width="100px">发布人</th>
+				<th width="90px">发布时间</th>
+				<th>内容缩略</th>		
+			</thead>
+			<tbody id="tbody_GG" class="doclist">
+			</tbody>
+		</table>
+		<div id="pages">
+			<button id="Fir_page" href="javascript:void(0)" onclick="Topage(1)" class="butt_page">首&nbsp;页</button>
+			<button id="Pre_page" href="javascript:void(0)" onclick="Nextpage('-')" class="butt_page" style="margin-right: 10px">上一页</button>
+			<span>第<span id="curr_page">1</span>页，共<span id="page_num">1</span>页&nbsp;</span>
+			<button id="Next_page" href="javascript:void(0)" onclick="Nextpage('+')" class="butt_page" style="margin-left: 10px">下一页</button>
+			<button id="Las_page" href="javascript:void(0)" onclick="Topage(0)" class="butt_page">尾&nbsp;页</button>
+		</div>
+	</div>
+	<!--遮罩层：用于显示弹层后遮盖下面的页面元素-->
+	<div id="overlay" class="overlay"></div>	
+	<div id="overlay2" class="overlay2"></div>	
+	<!--弹层：频道管理，用于添加或修改频道信息-->	
+	<div id="form_GG" class="popwindow">
+		<div id="title_form_GG" class="pop_head">公告管理</div>
+		<div class="pop_body" style="line-height: 40px;padding: 25px">
+			<div>公告类型：<select id="form_type" style="background-color: transparent;height: 25px;">
+					<option>放假通知</option>
+				 	<option>任命文件</option>
+				</select>
+			</div>
+			<div>标题：<input id="name" style="width: 470px"></div>
+			<div>公告内容：</div>
+			<div><textarea id='content' style="width:600px;height: 400px"></textarea></div>
+		</div>
+		<div class="pop_foot" style="padding-bottom: 20px">
+			<table width="100%" cellspacing="0" cellpadding="0"><tbody>
+				<tr><td width="50%" align="center" valign="middle">
+					<button class="module_butt" href="javascript:void(0)" onclick="CloseForm('#form_GG','#overlay')">取消</button>
+				</td><td align="center" valign="middle">
+					<button class="module_butt" href="javascript:void(0)" onclick="save()">保存</button>
+				</td></tr>
+			</tbody></table>				
+		</div>
+	</div>	
+	<!--弹层：公告正文-->	
+	<div id="form_board_gg" class="popwindow" style="">
+		<div id="title_form_board_gg" class="pop_head"></div>
+		<div class="pop_body" style="padding: 10px;width: 600px;padding: 35px;">
+			<div id="board_title"></div>
+			<div>
+				<table width="100%" cellspacing="0" cellpadding="0"><tbody>
+					<tr>
+						<td id="board_dtime" align="left"></td>
+						<td id="board_author" align="right"></td>
+					</tr>
+				</tbody></table>
+			</div>
+			<div id="board_content"></div>
+		</div>
+		<div class="pop_foot" style="padding-bottom: 30px;text-align: center">
+			<button class="module_butt" href="javascript:void(0)" onclick="CloseForm('#form_board_gg','#overlay')">关闭</button>				
+		</div>
+	</div>	
+	<!--弹层：警告-->
+	<div id="form_alert" class="popwindow">
+		<div id="form_alert_title" class="pop_head">友好提醒</div>
+		<div class="pop_body" style="text-align: center;padding:20px 40px 10px 40px;">
+			<span id="alert_mess"></span>
+		</div>
+		<div id="alertbutt" style="text-align: center;padding-bottom: 20px">
+			<button  class="module_butt" href="javascript:void(0)" onclick="CloseForm('#form_alert','#overlay2')">确定</button>		
+		</div>
+	</div>
+	</div><!--用于结束container-->
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/comm.js"></script>
+<script type="text/javascript" src="js/gonggao.js"></script>
+</html>

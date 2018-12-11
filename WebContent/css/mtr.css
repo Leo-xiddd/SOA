@@ -1,0 +1,35 @@
+body{
+	overflow-y : hide;
+	overflow-x : hide;
+	margin:0;
+	border:0;
+	background-color: #ebf2f5;
+
+}
+.module_butt{
+	font-family:'black';	
+	font-size: 14px;
+	color: #ffffff;
+	border-radius:7px;
+	height:32px;
+	width: 90px;
+	border:1px solid #979797;
+	margin-right:15px;
+	background-color: #51B1F2;
+	outline: none;
+}
+#form_order{
+	top: 30%;
+	left: 35%;
+}
+.meetnote{
+	background-color: #f1e3eb;
+	padding: 15px;
+	word-wrap: break-word;
+	word-break: break-all;
+	width: 60px;
+	height: 100px;
+	line-height: 24px;
+	border-right: 1px solid #ecabd2;
+
+}
